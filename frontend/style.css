@@ -1,0 +1,303 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: white;
+    color: #1e293b;
+}
+
+nav button:hover {
+    background: #cbd5e1;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    display: none;
+    padding: 30px;
+}
+
+.section.active {
+    display: block;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.dashboard h2 {
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 40px;
+}
+
+
+/* =========================
+   STUDENT FORM
+========================= */
+
+.form-container {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+input,
+select {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-container input {
+    width: 180px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+.form-container button {
+    background: #2563eb;
+    color: white;
+    margin: 5px;
+}
+
+.form-container button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search {
+    margin: 20px 0;
+}
+
+.search input {
+    width: 250px;
+}
+
+.search button {
+    background: #475569;
+    color: white;
+    margin: 5px;
+}
+
+.search button:hover {
+    background: #334155;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #1e293b;
+    color: white;
+}
+
+tr:hover {
+    background: #f8fafc;
+}
+
+
+/* =========================
+   EDIT / DELETE BUTTONS
+========================= */
+
+.edit {
+    background: #f59e0b;
+    color: white;
+    margin: 2px;
+}
+
+.edit:hover {
+    background: #d97706;
+}
+
+.delete {
+    background: #dc2626;
+    color: white;
+    margin: 2px;
+}
+
+.delete:hover {
+    background: #b91c1c;
+}
+
+
+/* =========================
+   CALCULATOR
+========================= */
+
+.calculator {
+    background: white;
+    max-width: 400px;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator input,
+.calculator select {
+    width: 100%;
+    margin: 8px 0;
+}
+
+.calculator button {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    margin-top: 10px;
+}
+
+.calculator button:hover {
+    background: #1d4ed8;
+}
+
+#calcResult {
+    margin-top: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 20px;
+    }
+
+    .form-container input {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .search input {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+}
+
+/* =========================
+   SORTING
+========================= */
+
+.sorting {
+    margin: 15px 0;
+}
+
+.sorting label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.sorting select {
+    min-width: 180px;
+}
