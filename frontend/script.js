@@ -2,7 +2,7 @@
 // BACKEND API
 // ==========================================
 
-const API = "http://localhost:8080/api";
+const API = "https://student-management-nsfk.onrender.com/api";
 let currentStudents = [];
 
 // ==========================================
