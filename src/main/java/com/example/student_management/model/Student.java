@@ -1,37 +1,32 @@
 package com.example.student_management.model;
 
-import jakarta.persistence.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
-@Table(name = "students")
+@Document(collection = "students")
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     private String name;
 
-    @Column(name = "roll_no", nullable = false, unique = true)
     private String rollNo;
 
-    @Column(nullable = false)
     private String department;
 
-    @Column(nullable = false)
     private int semester;
 
-    @Column(nullable = false)
     private double marks;
 
     public Student() {
     }
 
-    public Student(String name, String rollNo,
+    public Student(Long id, String name, String rollNo,
                    String department, int semester,
                    double marks) {
 
+        this.id = id;
         this.name = name;
         this.rollNo = rollNo;
         this.department = department;
@@ -43,44 +38,44 @@ public class Student {
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getRollNo() {
-        return rollNo;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public int getSemester() {
-        return semester;
-    }
-
-    public double getMarks() {
-        return marks;
-    }
-
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
+    public String getRollNo() {
+        return rollNo;
+    }
+
     public void setRollNo(String rollNo) {
         this.rollNo = rollNo;
+    }
+
+    public String getDepartment() {
+        return department;
     }
 
     public void setDepartment(String department) {
         this.department = department;
     }
 
+    public int getSemester() {
+        return semester;
+    }
+
     public void setSemester(int semester) {
         this.semester = semester;
+    }
+
+    public double getMarks() {
+        return marks;
     }
 
     public void setMarks(double marks) {

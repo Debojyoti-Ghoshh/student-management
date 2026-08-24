@@ -12,12 +12,28 @@ public class StudentService {
 
     private final StudentRepository repository;
 
-    public StudentService(StudentRepository repository) {
+    private final SequenceGeneratorService sequenceGeneratorService;
+
+    public StudentService(
+            StudentRepository repository,
+            SequenceGeneratorService sequenceGeneratorService) {
+    
         this.repository = repository;
+        this.sequenceGeneratorService = sequenceGeneratorService;
     }
 
     // Add student
     public Student addStudent(Student student) {
+
+        if (student.getId() == null) {
+    
+            student.setId(
+                    sequenceGeneratorService.generateSequence(
+                            "students_sequence"
+                    )
+            );
+        }
+    
         return repository.save(student);
     }
 
